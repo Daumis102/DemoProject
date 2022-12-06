@@ -1,0 +1,1 @@
+export {FormatedScrollView} from './FormatedScrollView';
