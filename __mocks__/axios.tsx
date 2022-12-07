@@ -1,6 +1,6 @@
 export default {
   get: jest.fn(url => {
-    if (url === '/users') {
+    if (url === 'https://jsonplaceholder.typicode.com/users') {
       return Promise.resolve({
         data: [
           {
