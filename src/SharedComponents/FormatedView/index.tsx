@@ -1,0 +1,1 @@
+export {FormatedView} from './FormatedView';
