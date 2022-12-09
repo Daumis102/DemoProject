@@ -4,25 +4,19 @@ const baseStyle = StyleSheet.create({});
 
 const portrait = StyleSheet.create({
   ...baseStyle,
-  headerView: {flexBasis: 200},
+  headerView: {flexBasis: 150},
   headerText: {
-    backgroundColor: 'green',
     textAlign: 'center',
     textAlignVertical: 'center',
     flex: 1,
   },
   scrollView: {
-    flexBasis: 300,
-    backgroundColor: 'green',
     borderWidth: 1,
-  },
-  scrollViewItem: {
-    flexBasis: 50,
-    backgroundColor: 'red',
   },
   container: {
     borderWidth: 1,
     flexDirection: 'column',
+    flex: 1,
   },
 });
 
@@ -35,20 +29,20 @@ const landscape = StyleSheet.create({
     flex: 1,
   },
   scrollView: {
-    flexBasis: 50,
+    flexBasis: 200,
     flexGrow: 1,
     borderWidth: 1,
-  },
-  scrollViewItem: {
-    flexBasis: 50,
-    flexGrow: 1.3,
-    backgroundColor: 'blue',
   },
   container: {
     borderWidth: 1,
     flexDirection: 'row',
+    flex: 1,
   },
 });
 
-const styles = {portrait, landscape};
+const listItem = StyleSheet.create({
+  listItem: {flexBasis: 50, margin: 10, padding: 10},
+});
+
+const styles = {portrait, landscape, listItem};
 export default styles;
