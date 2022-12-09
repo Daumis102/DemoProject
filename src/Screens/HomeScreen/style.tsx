@@ -4,26 +4,23 @@ const baseStyle = StyleSheet.create({});
 
 const portrait = StyleSheet.create({
   ...baseStyle,
-  headerView: {flexBasis: 100, flexGrow: 1},
+  headerView: {flexBasis: 200},
   headerText: {
-    backgroundColor: 'blue',
+    backgroundColor: 'green',
     textAlign: 'center',
     textAlignVertical: 'center',
     flex: 1,
   },
   scrollView: {
-    flexBasis: 50,
-    backgroundColor: 'blue',
-    flexGrow: 2,
+    flexBasis: 300,
+    backgroundColor: 'green',
     borderWidth: 1,
   },
   scrollViewItem: {
     flexBasis: 50,
-    flexGrow: 1.3,
     backgroundColor: 'red',
   },
   container: {
-    height: 300,
     borderWidth: 1,
     flexDirection: 'column',
   },
@@ -31,7 +28,7 @@ const portrait = StyleSheet.create({
 
 const landscape = StyleSheet.create({
   ...baseStyle,
-  headerView: {flexBasis: 100, flexGrow: 1},
+  headerView: {flexBasis: 50, flexGrow: 1},
   headerText: {
     textAlign: 'center',
     textAlignVertical: 'center',
@@ -39,16 +36,15 @@ const landscape = StyleSheet.create({
   },
   scrollView: {
     flexBasis: 50,
-    flexGrow: 2,
+    flexGrow: 1,
     borderWidth: 1,
   },
   scrollViewItem: {
     flexBasis: 50,
     flexGrow: 1.3,
-    backgroundColor: 'red',
+    backgroundColor: 'blue',
   },
   container: {
-    height: 300,
     borderWidth: 1,
     flexDirection: 'row',
   },
