@@ -2,7 +2,7 @@ import {NotUndefined} from '@redux-saga/types';
 import axios from 'axios';
 import {MulticastChannel, stdChannel} from 'redux-saga';
 import {put} from 'redux-saga/effects';
-import {loginUser, setUser} from '../slices/UserSlice';
+import {loginUser, setUser} from '../../slices/UserSlice';
 import {loginUserWatcher} from './LoginUserSaga';
 
 describe('LoginUserSaga', () => {

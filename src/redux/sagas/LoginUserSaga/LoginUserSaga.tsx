@@ -1,7 +1,6 @@
+import {fetchUser, User} from '@api';
+import {loginUser, setUser} from '@redux';
 import {call, put, takeLatest} from 'redux-saga/effects';
-import {User} from '../../api/types';
-import {fetchUser} from '../../api/Users';
-import {loginUser, setUser} from '../slices/UserSlice';
 
 export function* loginUserWatcher() {
   yield takeLatest(loginUser.toString(), loginUserWorker);

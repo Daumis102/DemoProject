@@ -1,12 +1,12 @@
 import {call, put, take, takeLatest} from 'redux-saga/effects';
-import {User} from '../../api/types';
-import {fetchUser} from '../../api/Users';
+import {User} from '../../../api/types';
+import {fetchUser} from '../../../api/Users';
 import {
   registerUserStep1,
   registerUserStep2,
   registerUserStep3,
   setUser,
-} from '../slices/UserSlice';
+} from '../../slices/UserSlice';
 
 export function* registerUserWatcher() {
   console.log('Register user saga');
