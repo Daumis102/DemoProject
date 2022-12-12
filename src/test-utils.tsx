@@ -8,13 +8,12 @@ const AllTheProviders: FC<{children: React.ReactNode}> = ({children}) => {
   return <Provider store={store}>{children}</Provider>;
 };
 
-const customRender = (
+function customRender(
   ui: ReactElement,
   options?: Omit<RenderOptions, 'wrapper'>,
-) => {
+) {
   render(ui, {wrapper: AllTheProviders, ...options});
   return {store};
-};
-
+}
 export * from '@testing-library/react-native';
 export {customRender as render};
