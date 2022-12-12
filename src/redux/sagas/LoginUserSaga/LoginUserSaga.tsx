@@ -9,5 +9,7 @@ export function* loginUserWatcher() {
 function* loginUserWorker(action: any) {
   const user: User | undefined = yield call(fetchUser, action.payload);
   console.log('user: ', user);
-  if (user) yield put(setUser(user));
+  if (user) {
+    yield put(setUser(user));
+  }
 }

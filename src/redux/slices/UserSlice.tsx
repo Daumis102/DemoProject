@@ -20,13 +20,13 @@ export const userSlice = createSlice({
     setUserName: (state, action) => {
       state.user = {...state.user, name: action.payload};
     },
-    registerUserStep1: state => {
+    registerUserStep1: () => {
       console.log('registerUserStep1 from Slice');
     },
 
     // Saga actions
     loginUser: (state, action) => {},
-    registerUserStep2: state => {},
+    registerUserStep2: () => {},
     registerUserStep3: (state, action) => {},
   },
 });

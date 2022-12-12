@@ -10,7 +10,7 @@ const App = () => {
   return (
     <SafeAreaView style={{flex: 1}}>
       <Provider store={store}>
-        <RootNavigator></RootNavigator>
+        <RootNavigator />
       </Provider>
     </SafeAreaView>
   );

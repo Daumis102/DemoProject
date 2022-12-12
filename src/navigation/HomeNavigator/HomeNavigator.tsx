@@ -7,8 +7,8 @@ const Drawer = createDrawerNavigator<HomeNavigatorParamList>();
 export const HomeNavigator = () => {
   return (
     <Drawer.Navigator>
-      <Drawer.Screen component={HomeScreen} name="Home"></Drawer.Screen>
-      <Drawer.Screen component={SettingsScreen} name="Settings"></Drawer.Screen>
+      <Drawer.Screen component={HomeScreen} name="Home" />
+      <Drawer.Screen component={SettingsScreen} name="Settings" />
     </Drawer.Navigator>
   );
 };

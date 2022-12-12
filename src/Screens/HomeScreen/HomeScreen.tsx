@@ -28,12 +28,13 @@ export const HomeScreen = () => {
         <TextInput
           onChangeText={setName}
           value={name}
-          placeholder="Enter name"></TextInput>
-        <Button onPress={addName} title="Add"></Button>
+          placeholder="Enter name"
+        />
+        <Button onPress={addName} title="Add" />
       </FormatedView>
       <FormatedScrollView style={style.scrollView}>
-        {names.map(name => (
-          <ListItem text={name.name} key={name.id}></ListItem>
+        {names.map(item => (
+          <ListItem text={item.name} key={item.id} />
         ))}
       </FormatedScrollView>
     </View>

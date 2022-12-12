@@ -1,12 +1,12 @@
 import {call, put, take, takeLatest} from 'redux-saga/effects';
-import {User} from '../../../api/types';
-import {fetchUser} from '../../../api/Users';
+import {User} from '../../../api';
+import {fetchUser} from '../../../api';
 import {
   registerUserStep1,
   registerUserStep2,
   registerUserStep3,
   setUser,
-} from '../../slices/UserSlice';
+} from '../../slices';
 
 export function* registerUserWatcher() {
   console.log('Register user saga');
@@ -20,5 +20,7 @@ export function* registerUserWorker() {
   const {payload} = yield take(registerUserStep3.toString());
   console.log('after third, name: ', payload);
   const user: User = yield call(fetchUser, payload);
-  if (user) yield put(setUser(user));
+  if (user) {
+    yield put(setUser(user));
+  }
 }

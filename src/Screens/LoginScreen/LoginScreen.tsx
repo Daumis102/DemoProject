@@ -2,7 +2,7 @@ import React from 'react';
 import {useTranslation} from 'react-i18next';
 import {Button} from 'react-native';
 import {LoginScreenProps} from '../../navigation';
-import {loginUser} from '../../redux/slices/UserSlice';
+import {loginUser} from '../../redux';
 import {useAppDispatch} from '../../redux/store';
 import {FormatedScrollView} from '../../SharedComponents';
 
@@ -23,9 +23,9 @@ export const LoginScreen = ({navigation}: LoginScreenProps) => {
   }
   return (
     <FormatedScrollView>
-      <Button title={t('Login')} onPress={login}></Button>
-      <Button title={t('Register')} onPress={register}></Button>
-      <Button title={t('Change language')} onPress={changeLanguage}></Button>
+      <Button title={t('Login')} onPress={login} />
+      <Button title={t('Register')} onPress={register} />
+      <Button title={t('Change language')} onPress={changeLanguage} />
     </FormatedScrollView>
   );
 };

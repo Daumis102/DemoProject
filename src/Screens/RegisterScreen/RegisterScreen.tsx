@@ -6,7 +6,7 @@ import {
   registerUserStep2,
   registerUserStep3,
   selectUserId,
-} from '../../redux/slices/UserSlice';
+} from '../../redux';
 import {useAppDispatch} from '../../redux/store';
 import {FormatedScrollView} from '../../SharedComponents';
 
@@ -17,7 +17,7 @@ export const RegisterScreen = () => {
 
   useEffect(() => {
     dispatch(registerUserStep1());
-  }, []);
+  }, [dispatch]);
 
   const register = () => {
     dispatch(registerUserStep3(name));
@@ -26,13 +26,14 @@ export const RegisterScreen = () => {
   return (
     <FormatedScrollView>
       <Text>Enter your name:</Text>
-      <TextInput onChangeText={setName} value={name}></TextInput>
+      <TextInput onChangeText={setName} value={name} />
       <Button
         title="Check something"
         onPress={() => {
           dispatch(registerUserStep2());
-        }}></Button>
-      <Button title="Register" onPress={register}></Button>
+        }}
+      />
+      <Button title="Register" onPress={register} />
       {userId ? <Text>UserId: {userId}</Text> : null}
     </FormatedScrollView>
   );
