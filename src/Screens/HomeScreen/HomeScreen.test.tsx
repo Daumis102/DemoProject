@@ -17,6 +17,11 @@ describe('HomeScreen', () => {
     expect(screen.getByText('bar')).toBeTruthy();
   });
 
+  it('should match a snapshot after adding a new item to the list', () => {
+    fillNameInputAndPress('foo');
+    expect(screen.toJSON()).toMatchSnapshot();
+  });
+
   function fillNameInputAndPress(text: string) {
     const inputField = screen.getByPlaceholderText('Enter name');
     fireEvent.changeText(inputField, text);
