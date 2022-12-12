@@ -1,10 +1,12 @@
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {DrawerScreenProps} from '@react-navigation/drawer';
 
 export type HomeNavigatorParamList = {
   Home: undefined;
+  Settings: undefined;
 };
 
-export type LoginScreenProps = NativeStackScreenProps<
+export type HomeScreenProps = DrawerScreenProps<HomeNavigatorParamList, 'Home'>;
+export type SettingsScreenProps = DrawerScreenProps<
   HomeNavigatorParamList,
-  'Home'
+  'Settings'
 >;

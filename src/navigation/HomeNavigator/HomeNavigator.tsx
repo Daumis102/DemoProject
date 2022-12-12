@@ -1,13 +1,14 @@
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {HomeScreen} from '../../Screens';
+import {createDrawerNavigator} from '@react-navigation/drawer';
+import {HomeScreen, SettingsScreen} from '../../Screens';
 import {HomeNavigatorParamList} from './types';
 
-const Stack = createNativeStackNavigator<HomeNavigatorParamList>();
+const Drawer = createDrawerNavigator<HomeNavigatorParamList>();
 
 export const HomeNavigator = () => {
   return (
-    <Stack.Navigator>
-      <Stack.Screen component={HomeScreen} name="Home"></Stack.Screen>
-    </Stack.Navigator>
+    <Drawer.Navigator>
+      <Drawer.Screen component={HomeScreen} name="Home"></Drawer.Screen>
+      <Drawer.Screen component={SettingsScreen} name="Settings"></Drawer.Screen>
+    </Drawer.Navigator>
   );
 };
